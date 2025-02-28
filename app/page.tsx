@@ -147,10 +147,10 @@ const photos: Photo[] = [
 
 const tourDates = [
   {
-    date: "Ago. 27",
-    venue: "Metropólitan",
-    city: "Ciudad de México",
-    link: "https://www.ticketmaster.com.mx/allison-boletos/artist/1409233?utm_source=TM-google&gad_source=1&gclid=CjwKCAjw1emzBhB8EiwAHwZZxVU_eemhrcaxdoB05605LspWkLCmsY0juRMl4rEGwzPcqEaPnq9x-xoCA-wQAvD_BwE",
+    date: "Mar. 8",
+    venue: "Cineteca Alameda",
+    city: "San Luis Potosí",
+    link: "https://arema.mx/checkout/65420/areas",
   },
   {
     date: "Ago. 29",
