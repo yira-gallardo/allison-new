@@ -183,6 +183,12 @@ const tourDates = [
     link: "https://www.ticketmaster.pe/event/vivo-x-el-rock-2025-venta-general",
   },
   {
+    date: "Jun. 29",
+    venue: "Noches del botánico",
+    city: "Madrid, Esp",
+    link: "https://entradas.nochesdelbotanico.com/nochesdelbotanico/select/2377545?viewCode=V_blockmap_view",
+  },
+  {
     date: "Jul. 12",
     venue: "Pepsi Center",
     city: "CDMX",
