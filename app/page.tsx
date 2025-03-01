@@ -172,8 +172,8 @@ const tourDates = [
   },
   {
     date: "Mar. 27",
-    venue: "Showcenter",
-    city: "Sala Metrónomo",
+    venue: "Sala Metrónomo",
+    city: "Santiago, Cl",
     link: "https://www.puntoticket.com/evento/allison-metronomo",
   },
   {
