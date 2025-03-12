@@ -147,18 +147,6 @@ const photos: Photo[] = [
 
 const tourDates = [
   {
-    date: "Mar. 6",
-    venue: "Teatro del pueblo del Carnaval Río Grande",
-    city: "Río Grande, Zac, Mx",
-    link: "FREE",
-  },
-  {
-    date: "Mar. 8",
-    venue: "Cineteca Alameda",
-    city: "San Luis Potosí, Mx",
-    link: "https://arema.mx/checkout/65420/areas",
-  },
-  {
     date: "Mar. 21",
     venue: "Alice Park",
     city: "Cochamba, Bol",
