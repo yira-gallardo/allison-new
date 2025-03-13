@@ -185,7 +185,7 @@ const tourDates = [
   {
     date: "Jun. 27",
     venue: "The Victoria",
-    city: "Longon, UK",
+    city: "London, UK",
     link: "https://dice.fm/partner/casa-faro/event/3ov3vx-allison-27th-jun-the-victoria-london-tickets?dice_id=5505397&dice_channel=web&dice_tags=organic&dice_campaign=Casa+Faro&dice_feature=mio_marketing&_branch_match_id=1428794190734381600&utm_source=web&utm_campaign=Casa+Faro&utm_medium=mio_marketing&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9ZLyUxO1UvL1Q8xtzRNSjIzNDNPM7GvK0pNSy0qysxLj08qyi8vTi2yDU5MSyzKBAAxegXMOwAAAA%3D%3D",
   },
   {
