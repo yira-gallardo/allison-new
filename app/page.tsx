@@ -149,37 +149,49 @@ const tourDates = [
   {
     date: "Mar. 21",
     venue: "Alice Park",
-    city: "Cochamba, Bol",
+    city: "Cochamba, BO",
     link: "https://todotix.com.bo/ticket/allison-cbba",
   },
   {
     date: "Mar. 22",
     venue: "Hotel Real Plaza",
-    city: "La Paz, Bol",
+    city: "La Paz, BO",
     link: "https://todotix.com.bo/ticket/Allison-lp",
   },
   {
     date: "Mar. 25",
     venue: "The Roxy",
-    city: "Buenos Aires, Arg",
+    city: "Buenos Aires, ARG",
     link: "https://www.allaccess.com.ar/event/allison",
   },
   {
     date: "Mar. 27",
     venue: "Sala Metrónomo",
-    city: "Santiago, Cl",
+    city: "Santiago, CL",
     link: "https://www.puntoticket.com/evento/allison-metronomo",
   },
   {
     date: "Mar. 29",
     venue: "Festival vivo X el rock",
-    city: "Lima, Perú",
+    city: "Lima, PE",
     link: "https://www.ticketmaster.pe/event/vivo-x-el-rock-2025-venta-general",
+  },
+  {
+    date: "Jun. 26",
+    venue: "The Workman's Club",
+    city: "Dublín, IE",
+    link: "https://www.eventbrite.ie/e/allison-live-in-dublin-tickets-1284284532609?aff=oddtdtcreator",
+  },
+  {
+    date: "Jun. 27",
+    venue: "The Victoria",
+    city: "Longon, UK",
+    link: "https://dice.fm/partner/casa-faro/event/3ov3vx-allison-27th-jun-the-victoria-london-tickets?dice_id=5505397&dice_channel=web&dice_tags=organic&dice_campaign=Casa+Faro&dice_feature=mio_marketing&_branch_match_id=1428794190734381600&utm_source=web&utm_campaign=Casa+Faro&utm_medium=mio_marketing&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9ZLyUxO1UvL1Q8xtzRNSjIzNDNPM7GvK0pNSy0qysxLj08qyi8vTi2yDU5MSyzKBAAxegXMOwAAAA%3D%3D",
   },
   {
     date: "Jun. 29",
     venue: "Noches del botánico",
-    city: "Madrid, Esp",
+    city: "Madrid, ES",
     link: "https://entradas.nochesdelbotanico.com/nochesdelbotanico/select/2377545?viewCode=V_blockmap_view",
   },
   {
@@ -191,7 +203,7 @@ const tourDates = [
   {
     date: "Ago. 23",
     venue: "Teatro Diana",
-    city: "Guadalajara, Mx",
+    city: "Guadalajara, MX",
     link: "https://www.ticketmaster.com.mx/allison-guadalajara-23-08-2025/event/3D0062478ABB09AD",
   },
 ];
