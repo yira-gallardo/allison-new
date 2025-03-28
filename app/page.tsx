@@ -147,34 +147,16 @@ const photos: Photo[] = [
 
 const tourDates = [
   {
-    date: "Mar. 21",
-    venue: "Alice Park",
-    city: "Cochamba, BO",
-    link: "https://todotix.com.bo/ticket/allison-cbba",
-  },
-  {
-    date: "Mar. 22",
-    venue: "Hotel Real Plaza",
-    city: "La Paz, BO",
-    link: "https://todotix.com.bo/ticket/Allison-lp",
-  },
-  {
-    date: "Mar. 25",
-    venue: "The Roxy",
-    city: "Buenos Aires, ARG",
-    link: "https://www.allaccess.com.ar/event/allison",
-  },
-  {
-    date: "Mar. 27",
-    venue: "Sala Metrónomo",
-    city: "Santiago, CL",
-    link: "https://www.puntoticket.com/evento/allison-metronomo",
-  },
-  {
     date: "Mar. 29",
     venue: "Festival vivo X el rock",
     city: "Lima, PE",
     link: "https://www.ticketmaster.pe/event/vivo-x-el-rock-2025-venta-general",
+  },
+  {
+    date: "Jun. 14",
+    venue: "Salón Country Club VM",
+    city: "Puebla, MX",
+    link: "https://eventos.taquillaplus.com.mx/ordertickets.asp?p=988&src=default",
   },
   {
     date: "Jun. 26",
