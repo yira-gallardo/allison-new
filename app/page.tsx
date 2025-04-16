@@ -147,10 +147,10 @@ const photos: Photo[] = [
 
 const tourDates = [
   {
-    date: "Mar. 29",
-    venue: "Festival vivo X el rock",
-    city: "Lima, PE",
-    link: "https://www.ticketmaster.pe/event/vivo-x-el-rock-2025-venta-general",
+    date: "May. 3",
+    venue: "Recinto ferial",
+    city: "Tepatitlán, Jal, MX",
+    link: "https://www.facebook.com/ferchovargasBAILESpromocione",
   },
   {
     date: "Jun. 14",
@@ -181,6 +181,12 @@ const tourDates = [
     venue: "Pepsi Center",
     city: "CDMX",
     link: "https://www.ticketmaster.com.mx/allison-euforia-mexico-12-07-2025/event/14006252A1961658",
+  },
+  {
+    date: "Ago. 8",
+    venue: "Hotel Hotsson",
+    city: "Tampico, MX",
+    link: "https://arema.mx/e/14497",
   },
   {
     date: "Ago. 23",
