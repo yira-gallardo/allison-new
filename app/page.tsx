@@ -147,12 +147,6 @@ const photos: Photo[] = [
 
 const tourDates = [
   {
-    date: "May. 3",
-    venue: "Recinto ferial",
-    city: "Tepatitlán, Jal, MX",
-    link: "https://www.facebook.com/ferchovargasBAILESpromocione",
-  },
-  {
     date: "Jun. 14",
     venue: "Salón Country Club VM",
     city: "Puebla, MX",
