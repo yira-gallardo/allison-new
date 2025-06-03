@@ -153,6 +153,12 @@ const tourDates = [
     link: "https://eventos.taquillaplus.com.mx/ordertickets.asp?p=988&src=default",
   },
   {
+    date: "Jun. 22",
+    venue: "Rock Al Parque",
+    city: "Bogotá, CO",
+    link: "https://rockalparque.gov.co/new?fbclid=PAQ0xDSwKrD31leHRuA2FlbQIxMQABp90mUsRFWKRzIdo1udpqvmfmAMYCfwB2O1OM7GPdZDAkubtcG3dwRss7tJq2_aem_T7CRIk5CTOEZFN8CM_mnZw",
+  },
+  {
     date: "Jun. 26",
     venue: "The Workman's Club",
     city: "Dublín, IE",
@@ -187,6 +193,12 @@ const tourDates = [
     venue: "Teatro Diana",
     city: "Guadalajara, MX",
     link: "https://www.ticketmaster.com.mx/allison-guadalajara-23-08-2025/event/3D0062478ABB09AD",
+  },
+  {
+    date: "Sep. 6",
+    venue: "Foro del Lago",
+    city: "León, MX",
+    link: "https://eventos.taquillaplus.com.mx/ordertickets.asp?p=1012&src=default&fbclid=PAQ0xDSwKrEApleHRuA2FlbQIxMQABp-TjHeylXkZsYPkjyO6rT_jU4u8cCCaKXDYrLxdBxTMHT7dS9eNRnzSpWoZJ_aem_EXyquLYSjtKYqD0ga7w0_Q",
   },
 ];
 
