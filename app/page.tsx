@@ -147,36 +147,6 @@ const photos: Photo[] = [
 
 const tourDates = [
   {
-    date: "Jun. 14",
-    venue: "Salón Country Club VM",
-    city: "Puebla, MX",
-    link: "https://eventos.taquillaplus.com.mx/ordertickets.asp?p=988&src=default",
-  },
-  {
-    date: "Jun. 22",
-    venue: "Rock Al Parque",
-    city: "Bogotá, CO",
-    link: "https://rockalparque.gov.co/new?fbclid=PAQ0xDSwKrD31leHRuA2FlbQIxMQABp90mUsRFWKRzIdo1udpqvmfmAMYCfwB2O1OM7GPdZDAkubtcG3dwRss7tJq2_aem_T7CRIk5CTOEZFN8CM_mnZw",
-  },
-  {
-    date: "Jun. 26",
-    venue: "The Workman's Club",
-    city: "Dublín, IE",
-    link: "https://www.eventbrite.ie/e/allison-live-in-dublin-tickets-1284284532609?aff=oddtdtcreator",
-  },
-  {
-    date: "Jun. 27",
-    venue: "The Victoria",
-    city: "London, UK",
-    link: "https://dice.fm/partner/casa-faro/event/3ov3vx-allison-27th-jun-the-victoria-london-tickets?dice_id=5505397&dice_channel=web&dice_tags=organic&dice_campaign=Casa+Faro&dice_feature=mio_marketing&_branch_match_id=1428794190734381600&utm_source=web&utm_campaign=Casa+Faro&utm_medium=mio_marketing&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9ZLyUxO1UvL1Q8xtzRNSjIzNDNPM7GvK0pNSy0qysxLj08qyi8vTi2yDU5MSyzKBAAxegXMOwAAAA%3D%3D",
-  },
-  {
-    date: "Jun. 29",
-    venue: "Noches del botánico",
-    city: "Madrid, ES",
-    link: "https://entradas.nochesdelbotanico.com/nochesdelbotanico/select/2377545?viewCode=V_blockmap_view",
-  },
-  {
     date: "Jul. 12",
     venue: "Pepsi Center",
     city: "CDMX",
