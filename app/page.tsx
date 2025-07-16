@@ -145,19 +145,7 @@ const photos: Photo[] = [
   },
 ];
 
-const tourDates = [
-  {
-    date: "Jul. 12",
-    venue: "Pepsi Center",
-    city: "CDMX",
-    link: "https://www.ticketmaster.com.mx/allison-euforia-mexico-12-07-2025/event/14006252A1961658",
-  },
-  {
-    date: "Ago. 8",
-    venue: "Hotel Hotsson",
-    city: "Tampico, MX",
-    link: "https://arema.mx/e/14497",
-  },
+const tourDates = [  
   {
     date: "Ago. 23",
     venue: "Teatro Diana",
@@ -165,10 +153,28 @@ const tourDates = [
     link: "https://www.ticketmaster.com.mx/allison-guadalajara-23-08-2025/event/3D0062478ABB09AD",
   },
   {
+    date: "Sept. 5",
+    venue: "Vamos Otra Vez Fest",
+    city: "San Luis Potosí, MX",
+    link: "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=636",
+  },
+  {
     date: "Sep. 6",
-    venue: "Foro del Lago",
+    venue: "Vamos Otra Vez Fest",
     city: "León, MX",
-    link: "https://eventos.taquillaplus.com.mx/ordertickets.asp?p=1012&src=default&fbclid=PAQ0xDSwKrEApleHRuA2FlbQIxMQABp-TjHeylXkZsYPkjyO6rT_jU4u8cCCaKXDYrLxdBxTMHT7dS9eNRnzSpWoZJ_aem_EXyquLYSjtKYqD0ga7w0_Q",
+    link: "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=616",
+  },
+  {
+    date: "Sep. 7”,
+    venue: "Vamos Otra Vez Fest",
+    city: "Querétaro, MX",
+    link: "https://www.eticket.mx/masinformacion.aspx?idevento=34254",
+  },
+ {
+    date: "Nov. 8”,
+    venue: "Vamos Otra Vez Fest",
+    city: "Toluca, MX",
+    link: "https://boleticka.com/puntoVenta/#/preview/136",
   },
 ];
 
