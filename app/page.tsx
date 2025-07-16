@@ -165,13 +165,13 @@ const tourDates = [
     link: "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=616",
   },
   {
-    date: "Sep. 7”,
+    date: "Sep. 7",
     venue: "Vamos Otra Vez Fest",
     city: "Querétaro, MX",
     link: "https://www.eticket.mx/masinformacion.aspx?idevento=34254",
   },
  {
-    date: "Nov. 8”,
+    date: "Nov. 8",
     venue: "Vamos Otra Vez Fest",
     city: "Toluca, MX",
     link: "https://boleticka.com/puntoVenta/#/preview/136",
