@@ -147,6 +147,12 @@ const photos: Photo[] = [
 
 const tourDates = [  
   {
+    date: "Ago. 16",
+    venue: "SpeedFest",
+    city: "CDMX, MX",
+    link: "https://www.ticketmaster.com.mx/speedfest-boletos/artist/1385660",
+  },
+  {
     date: "Ago. 23",
     venue: "Teatro Diana",
     city: "Guadalajara, MX",
@@ -170,11 +176,65 @@ const tourDates = [
     city: "Querétaro, MX",
     link: "https://www.eticket.mx/masinformacion.aspx?idevento=34254",
   },
+  {
+    date: "Sep. 26",
+    venue: "Black Box",
+    city: "Tijuana, MX",
+    link: "https://arema.mx/e/15245",
+  },
+  {
+    date: "Sep. 27",
+    venue: "Foro Dragón",
+    city: "Mexicali, MX",
+    link: "https://trendingpass.com/product/allison-euforia-mexicalli/",
+  },
+  {
+    date: "Oct. 3",
+    venue: "Liver Pub",
+    city: "Tlaxcala, MX",
+    link: "https://trendingpass.com/product/allison-euforia-tlaxcala/",
+  },
+  {
+    date: "Oct. 4",
+    venue: "Jardín Caníbal",
+    city: "Pachuca, MX",
+    link: "https://trendingpass.com/product/allison-euforia-pachuca/",
+  },
+  {
+    date: "Oct. 11",
+    venue: "Hotel Hotsson",
+    city: "Tampico, MX",
+    link: "https://arema.mx/e/14625?fbclid=IwY2xjawLmZ4xleHRuA2FlbQIxMABicmlkETFLRGlBZGNPSGkxeG5XOGl2AR7_H81c4CKWFZ2j-i63VMKV3x8vUdCRV8_VYuLCI-IGTz_-2dIpn1Cy39h_3Q_aem_rxS2B27KFSBj3WJo0Yrksg",
+  },
+  {
+    date: "Oct. 16",
+    venue: "Distroy",
+    city: "Zacatecas, MX",
+    link: "https://trendingpass.com/product/allison-euforia-zacatecas/",
+  },
+  {
+    date: "Oct. 17",
+    venue: "Rock Sí",
+    city: "Aguascalientes, MX",
+    link: "https://trendingpass.com/product/allison-euforia-aguascalientes/",
+  },
+  {
+    date: "Oct. 18",
+    venue: "Cactus",
+    city: "Morelia, MX",
+    link: "https://trendingpass.com/product/allison-euforia-morelia/",
+  },
  {
     date: "Nov. 8",
     venue: "Vamos Otra Vez Fest",
     city: "Toluca, MX",
     link: "https://boleticka.com/puntoVenta/#/preview/136",
+  },
+  {
+    date: "Dic. 6",
+    venue: "Jardines de México",
+    city: "Tequesquitengo, MX",
+    link: "https://jardinesdemexico.com/",
   },
 ];
 
