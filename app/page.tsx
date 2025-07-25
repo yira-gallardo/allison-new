@@ -145,7 +145,7 @@ const photos: Photo[] = [
   },
 ];
 
-const tourDates = [  
+const tourDates = [
   {
     date: "Ago. 16",
     venue: "SpeedFest",
@@ -224,7 +224,7 @@ const tourDates = [
     city: "Morelia, MX",
     link: "https://trendingpass.com/product/allison-euforia-morelia/",
   },
- {
+  {
     date: "Nov. 8",
     venue: "Vamos Otra Vez Fest",
     city: "Toluca, MX",
@@ -234,22 +234,22 @@ const tourDates = [
     date: "Dic. 6",
     venue: "Jardines de México",
     city: "Tequesquitengo, MX",
-    link: "https://jardinesdemexico.com/",
+    link: "https://web2.superboletos.com/SuperBoletos/landing-evento?event_id=2PwXQC9H2Moo5wUENjVDVg",
   },
 ];
 
 const merchItems = [
   {
-    image: "/img/img-1.png",
-    link: "https://reycamiseta.com/categoria-producto/allison/",
+    image: "/img/merch-1.png",
+    link: "https://reycamiseta.com/producto/oversize-negra-foto/",
   },
   {
-    image: "/img/img-2.png",
-    link: "https://reycamiseta.com/categoria-producto/allison/",
+    image: "/img/merch-2.png",
+    link: "https://reycamiseta.com/producto/oversize-negra-pantera-trueno/",
   },
   {
-    image: "/img/img-3.png",
-    link: "https://reycamiseta.com/categoria-producto/allison/",
+    image: "/img/merch-3.png",
+    link: "https://reycamiseta.com/producto/oversize-negra-pantera/",
   },
 ];
 
@@ -310,7 +310,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="hidden md:block">
             <Image
-              src="/img/banner.jpg"
+              src="/img/banner_b.jpg"
               alt="hero"
               layout="fill"
               objectFit="cover"
