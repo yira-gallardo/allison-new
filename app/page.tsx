@@ -236,12 +236,6 @@ const tourDates = [
     city: "Tequesquitengo, MX",
     link: "https://web2.superboletos.com/SuperBoletos/landing-evento?event_id=2PwXQC9H2Moo5wUENjVDVg",
   },
-  {
-    date: "Dic. 19",
-    venue: "Prueba",
-    city: "Prueba2",
-    link: "https://web2.superboletos.com/SuperBoletos/landing-evento?event_id=2PwXQC9H2Moo5wUENjVDVg",
-  },
 ];
 
 const merchItems = [
