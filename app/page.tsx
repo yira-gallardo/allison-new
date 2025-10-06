@@ -147,60 +147,6 @@ const photos: Photo[] = [
 
 const tourDates = [
   {
-    date: "Ago. 16",
-    venue: "SpeedFest",
-    city: "CDMX, MX",
-    link: "https://www.ticketmaster.com.mx/speedfest-boletos/artist/1385660",
-  },
-  {
-    date: "Ago. 23",
-    venue: "Teatro Diana",
-    city: "Guadalajara, MX",
-    link: "https://www.ticketmaster.com.mx/allison-guadalajara-23-08-2025/event/3D0062478ABB09AD",
-  },
-  {
-    date: "Sept. 5",
-    venue: "Vamos Otra Vez Fest",
-    city: "San Luis Potosí, MX",
-    link: "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=636",
-  },
-  {
-    date: "Sep. 6",
-    venue: "Vamos Otra Vez Fest",
-    city: "León, MX",
-    link: "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=616",
-  },
-  {
-    date: "Sep. 7",
-    venue: "Vamos Otra Vez Fest",
-    city: "Querétaro, MX",
-    link: "https://www.eticket.mx/masinformacion.aspx?idevento=34254",
-  },
-  {
-    date: "Sep. 26",
-    venue: "Black Box",
-    city: "Tijuana, MX",
-    link: "https://arema.mx/e/15245",
-  },
-  {
-    date: "Sep. 27",
-    venue: "Foro Dragón",
-    city: "Mexicali, MX",
-    link: "https://trendingpass.com/product/allison-euforia-mexicalli/",
-  },
-  {
-    date: "Oct. 3",
-    venue: "Liver Pub",
-    city: "Tlaxcala, MX",
-    link: "https://trendingpass.com/product/allison-euforia-tlaxcala/",
-  },
-  {
-    date: "Oct. 4",
-    venue: "Jardín Caníbal",
-    city: "Pachuca, MX",
-    link: "https://trendingpass.com/product/allison-euforia-pachuca/",
-  },
-  {
     date: "Oct. 11",
     venue: "Hotel Hotsson",
     city: "Tampico, MX",
@@ -235,6 +181,24 @@ const tourDates = [
     venue: "Jardines de México",
     city: "Tequesquitengo, MX",
     link: "https://web2.superboletos.com/SuperBoletos/landing-evento?event_id=2PwXQC9H2Moo5wUENjVDVg",
+  },
+  {
+    date: "Feb. 20",
+    venue: "Vamos Otra Vez Fest",
+    city: "San Luis Potosí, MX",
+    link: "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=636",
+  },
+  {
+    date: "Feb. 1",
+    venue: "Vamos Otra Vez Fest",
+    city: "León, MX",
+    link: "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=616",
+  },
+  {
+    date: "Feb. 28",
+    venue: "Vamos Otra Vez Fest",
+    city: "Querétaro, MX",
+    link: "https://www.eticket.mx/masinformacion.aspx?idevento=34254",
   },
 ];
 
