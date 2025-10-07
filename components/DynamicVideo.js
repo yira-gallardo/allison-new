@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function DynamicVideo({ channelId, apiKey }) {
   const [latestVideo, setLatestVideo] = useState(null);
@@ -62,18 +63,37 @@ export default function DynamicVideo({ channelId, apiKey }) {
 
   if (loading) {
     return (
-      <section className="relative min-h-screen overflow-hidden">
+      <motion.section
+        className="relative min-h-screen overflow-hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-black">
           <div className="relative z-10 h-full flex items-center justify-center px-4">
-            <div className="text-center">
-              <div className="animate-spin rounded-full h-12 md:h-16 w-12 md:w-16 border-b-2 border-orange-500 mx-auto mb-4"></div>
-              <p className="text-white text-base md:text-lg">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <motion.div
+                className="animate-spin rounded-full h-12 md:h-16 w-12 md:w-16 border-b-2 border-orange-500 mx-auto mb-4"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+              ></motion.div>
+              <motion.p
+                className="text-white text-base md:text-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+              >
                 Loading latest video...
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
     );
   }
 
@@ -121,9 +141,21 @@ export default function DynamicVideo({ channelId, apiKey }) {
   const videoId = latestVideo.snippet.resourceId.videoId;
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black">
+    <motion.section
+      className="relative min-h-screen overflow-hidden bg-black"
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+    >
       {/* Embedded YouTube Player - Responsive */}
-      <div className="w-full h-screen">
+      <motion.div
+        className="w-full h-screen"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <iframe
           className="w-full h-full"
           src={`https://www.youtube.com/embed/${videoId}?autoplay=0&rel=0&modestbranding=1`}
@@ -132,7 +164,7 @@ export default function DynamicVideo({ channelId, apiKey }) {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

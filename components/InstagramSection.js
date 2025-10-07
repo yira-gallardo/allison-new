@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function InstagramSection() {
   useEffect(() => {
@@ -18,7 +19,7 @@ export default function InstagramSection() {
   }, []);
 
   return (
-    <section
+    <motion.section
       className="py-16 relative"
       style={{
         backgroundImage: "url('/img/textura.jpg')",
@@ -26,17 +27,33 @@ export default function InstagramSection() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       {/* Overlay para mantener la legibilidad del texto */}
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="container mx-auto px-4 relative z-10">
         {/* Instagram Title */}
-        <h2 className="text-4xl md:text-6xl font-bold text-center text-white mb-12 tracking-wider">
+        <motion.h2
+          className="text-4xl md:text-6xl font-bold text-center text-white mb-12 tracking-wider"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           INSTAGRAM
-        </h2>
+        </motion.h2>
 
         {/* LightWidget Instagram Feed */}
-        <div className="max-w-6xl mx-auto">
+        <motion.div
+          className="max-w-6xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <iframe
             src="//lightwidget.com/widgets/4f47618adfef597a838000bf15d19015.html"
             scrolling="no"
@@ -50,8 +67,8 @@ export default function InstagramSection() {
             }}
             title="Instagram Feed"
           />
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
