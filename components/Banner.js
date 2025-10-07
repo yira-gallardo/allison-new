@@ -15,7 +15,7 @@ export default function Banner() {
 
       {/* Imagen de fondo para móvil */}
       <Image
-        src="/img/banner_mobile.jpg"
+        src="/img/banner-mobile.jpg"
         alt="Allison Euforia Tour Banner Mobile"
         fill
         className="object-contain block md:hidden"
