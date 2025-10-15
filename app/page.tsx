@@ -147,12 +147,6 @@ const photos: Photo[] = [
 
 const tourDates = [
   {
-    date: "Oct. 11",
-    venue: "Hotel Hotsson",
-    city: "Tampico, MX",
-    link: "https://arema.mx/e/14625?fbclid=IwY2xjawLmZ4xleHRuA2FlbQIxMABicmlkETFLRGlBZGNPSGkxeG5XOGl2AR7_H81c4CKWFZ2j-i63VMKV3x8vUdCRV8_VYuLCI-IGTz_-2dIpn1Cy39h_3Q_aem_rxS2B27KFSBj3WJo0Yrksg",
-  },
-  {
     date: "Oct. 16",
     venue: "Distroy",
     city: "Zacatecas, MX",
