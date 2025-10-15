@@ -160,7 +160,7 @@ const tourDates = [
   },
   {
     date: "Oct. 18",
-    venue: "Cactus",
+    venue: "La Suavecita",
     city: "Morelia, MX",
     link: "https://trendingpass.com/product/allison-euforia-morelia/",
   },
