@@ -31,6 +31,29 @@ export default function TourSection() {
     { date: "28.FEB", location: "QUERÉTARO, MÉXICO - VAMOS OTRA VEZ" },
   ];
 
+  // Links para cada fecha del tour
+  const tourLinks = {
+    "26.SEP": "",
+    "27.SEP": "",
+    "02.OCT": "",
+    "03.OCT": "https://trendingpass.com/product/allison-euforia-tlaxcala/",
+    "04.OCT": "https://trendingpass.com/product/allison-euforia-pachuca/",
+    "11.OCT": "https://trendingpass.com/product/allison-euforia-tampico/",
+    "16.OCT": "https://trendingpass.com/product/allison-euforia-zacatecas/",
+    "17.OCT":
+      "https://trendingpass.com/product/allison-euforia-aguascalientes/",
+    "18.OCT": "https://trendingpass.com/product/allison-euforia-morelia/",
+    "08.NOV": "https://boleticka.com/puntoVenta/#/preview/136",
+    "05.DIC": "https://trendingpass.com/product/allison-euforia-puebla/",
+    "06.DIC":
+      "https://www.superboletos.com/landing-evento/2PwXQC9H2Moo5wUENjVDVg",
+    "20.FEB":
+      "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=636",
+    "21.FEB":
+      "https://eventos.taquillaplus.com.mx/ordertickets.asp?p=1012&src=default&fbclid=PAQ0xDSwKrEApleHRuA2FlbQIxMQABp-TjHeylXkZsYPkjyO6rT_jU4u8cCCaKXDYrLxdBxTMHT7dS9eNRnzSpWoZJ_aem_EXyquLYSjtKYqD0ga7w0_Q",
+    "28.FEB": "https://www.eticket.mx/masinformacion.aspx?idevento=34254",
+  };
+
   return (
     <motion.section
       className="py-8 md:py-16 px-4 md:px-6 relative"
@@ -116,15 +139,18 @@ export default function TourSection() {
 
                 {/* Botón de tickets */}
                 <div className="flex-shrink-0 w-full md:w-auto md:flex-1 md:text-right">
-                  <button
-                    className="w-full md:w-auto border border-white text-white font-black py-2 px-4 md:px-6 rounded hover:bg-white hover:text-black transition-colors duration-300 uppercase tracking-wide text-sm md:text-base"
+                  <a
+                    href={tourLinks[show.date]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full md:w-auto border border-white text-white font-black py-2 px-4 md:px-6 rounded hover:bg-white hover:text-black transition-colors duration-300 uppercase tracking-wide text-sm md:text-base inline-block text-center"
                     style={{
                       fontFamily: "Anton, sans-serif",
                       fontWeight: "400",
                     }}
                   >
                     TICKETS
-                  </button>
+                  </a>
                 </div>
               </motion.div>
             ))}
