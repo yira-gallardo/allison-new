@@ -33,24 +33,20 @@ export default function TourSection() {
 
   // Links para cada fecha del tour
   const tourLinks = {
-    "26.SEP": "",
-    "27.SEP": "",
-    "02.OCT": "",
+    "26.SEP": "#",
+    "27.SEP": "#",
+    "02.OCT": "#",
     "03.OCT": "https://trendingpass.com/product/allison-euforia-tlaxcala/",
     "04.OCT": "https://trendingpass.com/product/allison-euforia-pachuca/",
     "11.OCT": "https://trendingpass.com/product/allison-euforia-tampico/",
     "16.OCT": "https://trendingpass.com/product/allison-euforia-zacatecas/",
-    "17.OCT":
-      "https://trendingpass.com/product/allison-euforia-aguascalientes/",
+    "17.OCT": "https://trendingpass.com/product/allison-euforia-aguascalientes/",
     "18.OCT": "https://trendingpass.com/product/allison-euforia-morelia/",
     "08.NOV": "https://boleticka.com/puntoVenta/#/preview/136",
     "05.DIC": "https://trendingpass.com/product/allison-euforia-puebla/",
-    "06.DIC":
-      "https://www.superboletos.com/landing-evento/2PwXQC9H2Moo5wUENjVDVg",
-    "20.FEB":
-      "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=636",
-    "21.FEB":
-      "https://eventos.taquillaplus.com.mx/ordertickets.asp?p=1012&src=default&fbclid=PAQ0xDSwKrEApleHRuA2FlbQIxMQABp-TjHeylXkZsYPkjyO6rT_jU4u8cCCaKXDYrLxdBxTMHT7dS9eNRnzSpWoZJ_aem_EXyquLYSjtKYqD0ga7w0_Q",
+    "06.DIC": "https://www.superboletos.com/landing-evento/2PwXQC9H2Moo5wUENjVDVg",
+    "20.FEB": "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=636",
+    "21.FEB": "https://eventos.taquillaplus.com.mx/ordertickets.asp?p=1012",
     "28.FEB": "https://www.eticket.mx/masinformacion.aspx?idevento=34254",
   };
 
