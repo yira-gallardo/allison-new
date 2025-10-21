@@ -19,7 +19,9 @@ export default function Navigation() {
           {/* Enlaces del menú */}
           <div className="flex items-center gap-6">
             <a
-              href="/tour"
+              href="https://linktr.ee/allisonband"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#A0BEC0] font-bold text-lg uppercase tracking-wide hover:text-[#FFFFFF] transition-colors duration-300"
             >
               TOUR

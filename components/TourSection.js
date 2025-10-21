@@ -13,22 +13,82 @@ export default function TourSection() {
     document.head.appendChild(link);
   }, []);
 
+  // Función para determinar si una fecha ya pasó
+  const isDatePassed = (dateString, eventYear) => {
+    const currentDate = new Date();
+
+    // Parsear la fecha del formato "26.SEP"
+    const [day, month] = dateString.split(".");
+    const monthMap = {
+      JAN: 0,
+      FEB: 1,
+      MAR: 2,
+      APR: 3,
+      MAY: 4,
+      JUN: 5,
+      JUL: 6,
+      AUG: 7,
+      SEP: 8,
+      OCT: 9,
+      NOV: 10,
+      DIC: 11,
+    };
+
+    const eventMonth = monthMap[month];
+    const eventDate = new Date(eventYear, eventMonth, parseInt(day));
+
+    // Si el evento ya pasó
+    if (eventDate < currentDate) {
+      return true;
+    }
+
+    return false;
+  };
+
   const tourDates = [
-    { date: "26.SEP", location: "TIJUANA, MÉXICO - BLACK BOX" },
-    { date: "27.SEP", location: "MEXICALI, MÉXICO - FORO DRAGÓN" },
-    { date: "02.OCT", location: "BOCA DEL RÍO, VERACRUZ, MÉXICO - MCCARTHY'S" },
-    { date: "03.OCT", location: "TLAXCALA, MÉXICO - LIVER PUB" },
-    { date: "04.OCT", location: "PACHUCA, MÉXICO - JARDÍN CANIBAL" },
-    { date: "11.OCT", location: "TAMPICO, MÉXICO - WEEKEND FEST" },
-    { date: "16.OCT", location: "ZACATECAS, MÉXICO - FORO DESTROY" },
-    { date: "17.OCT", location: "AGUASCALIENTES, MÉXICO - ROCK SI" },
-    { date: "18.OCT", location: "MORELIA, MÉXICO - LA SUAVECITA" },
-    { date: "08.NOV", location: "TOLUCA, MÉXICO - VAMOS OTRA VEZ" },
-    { date: "05.DIC", location: "PUEBLA, MÉXICO - HOUSE OF PUNK" },
-    { date: "06.DIC", location: "TEQUESQUITENGO, MÉXICO - JARDINES DE MÉXICO" },
-    { date: "20.FEB", location: "SAN LUIS POTOSÍ, MÉXICO - VAMOS OTRA VEZ" },
-    { date: "21.FEB", location: "LEÓN, MÉXICO - VAMOS OTRA VEZ" },
-    { date: "28.FEB", location: "QUERÉTARO, MÉXICO - VAMOS OTRA VEZ" },
+    { date: "26.SEP", year: 2025, location: "TIJUANA, MÉXICO - BLACK BOX" },
+    { date: "27.SEP", year: 2025, location: "MEXICALI, MÉXICO - FORO DRAGÓN" },
+    {
+      date: "02.OCT",
+      year: 2025,
+      location: "BOCA DEL RÍO, VERACRUZ, MÉXICO - MCCARTHY'S",
+    },
+    { date: "03.OCT", year: 2025, location: "TLAXCALA, MÉXICO - LIVER PUB" },
+    {
+      date: "04.OCT",
+      year: 2025,
+      location: "PACHUCA, MÉXICO - JARDÍN CANIBAL",
+    },
+    { date: "11.OCT", year: 2025, location: "TAMPICO, MÉXICO - WEEKEND FEST" },
+    {
+      date: "16.OCT",
+      year: 2025,
+      location: "ZACATECAS, MÉXICO - FORO DESTROY",
+    },
+    {
+      date: "17.OCT",
+      year: 2025,
+      location: "AGUASCALIENTES, MÉXICO - ROCK SI",
+    },
+    { date: "18.OCT", year: 2025, location: "MORELIA, MÉXICO - LA SUAVECITA" },
+    { date: "08.NOV", year: 2025, location: "TOLUCA, MÉXICO - VAMOS OTRA VEZ" },
+    { date: "05.DIC", year: 2025, location: "PUEBLA, MÉXICO - HOUSE OF PUNK" },
+    {
+      date: "06.DIC",
+      year: 2025,
+      location: "TEQUESQUITENGO, MÉXICO - JARDINES DE MÉXICO",
+    },
+    {
+      date: "20.FEB",
+      year: 2026,
+      location: "SAN LUIS POTOSÍ, MÉXICO - VAMOS OTRA VEZ",
+    },
+    { date: "21.FEB", year: 2026, location: "LEÓN, MÉXICO - VAMOS OTRA VEZ" },
+    {
+      date: "28.FEB",
+      year: 2026,
+      location: "QUERÉTARO, MÉXICO - VAMOS OTRA VEZ",
+    },
   ];
 
   // Links para cada fecha del tour
@@ -40,12 +100,15 @@ export default function TourSection() {
     "04.OCT": "https://trendingpass.com/product/allison-euforia-pachuca/",
     "11.OCT": "https://trendingpass.com/product/allison-euforia-tampico/",
     "16.OCT": "https://trendingpass.com/product/allison-euforia-zacatecas/",
-    "17.OCT": "https://trendingpass.com/product/allison-euforia-aguascalientes/",
+    "17.OCT":
+      "https://trendingpass.com/product/allison-euforia-aguascalientes/",
     "18.OCT": "https://trendingpass.com/product/allison-euforia-morelia/",
     "08.NOV": "https://boleticka.com/puntoVenta/#/preview/136",
     "05.DIC": "https://trendingpass.com/product/allison-euforia-puebla/",
-    "06.DIC": "https://www.superboletos.com/landing-evento/2PwXQC9H2Moo5wUENjVDVg",
-    "20.FEB": "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=636",
+    "06.DIC":
+      "https://www.superboletos.com/landing-evento/2PwXQC9H2Moo5wUENjVDVg",
+    "20.FEB":
+      "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=636",
     "21.FEB": "https://eventos.taquillaplus.com.mx/ordertickets.asp?p=1012",
     "28.FEB": "https://www.eticket.mx/masinformacion.aspx?idevento=34254",
   };
@@ -110,7 +173,11 @@ export default function TourSection() {
                 {/* Fecha */}
                 <div className="flex-shrink-0 w-full md:w-auto md:flex-1">
                   <span
-                    className="text-[#A0BEC0] font-black text-base md:text-lg uppercase tracking-wide block"
+                    className={`font-black text-base md:text-lg uppercase tracking-wide block ${
+                      isDatePassed(show.date, show.year)
+                        ? "text-gray-500 line-through opacity-60"
+                        : "text-[#A0BEC0]"
+                    }`}
                     style={{
                       fontFamily: "Anton, sans-serif",
                       fontWeight: "400",
@@ -123,7 +190,11 @@ export default function TourSection() {
                 {/* Ubicación */}
                 <div className="flex-grow w-full md:flex-2 md:text-center">
                   <span
-                    className="text-[#A0BEC0] font-black text-sm md:text-lg uppercase tracking-wide block"
+                    className={`font-black text-sm md:text-lg uppercase tracking-wide block ${
+                      isDatePassed(show.date, show.year)
+                        ? "text-gray-500 line-through opacity-60"
+                        : "text-[#A0BEC0]"
+                    }`}
                     style={{
                       fontFamily: "Anton, sans-serif",
                       fontWeight: "400",
@@ -135,18 +206,30 @@ export default function TourSection() {
 
                 {/* Botón de tickets */}
                 <div className="flex-shrink-0 w-full md:w-auto md:flex-1 md:text-right">
-                  <a
-                    href={tourLinks[show.date]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full md:w-auto border border-white text-white font-black py-2 px-4 md:px-6 rounded hover:bg-white hover:text-black transition-colors duration-300 uppercase tracking-wide text-sm md:text-base inline-block text-center"
-                    style={{
-                      fontFamily: "Anton, sans-serif",
-                      fontWeight: "400",
-                    }}
-                  >
-                    TICKETS
-                  </a>
+                  {isDatePassed(show.date, show.year) ? (
+                    <span
+                      className="w-full md:w-auto border border-gray-500 text-gray-500 font-black py-2 px-4 md:px-6 rounded uppercase tracking-wide text-sm md:text-base inline-block text-center cursor-not-allowed opacity-60"
+                      style={{
+                        fontFamily: "Anton, sans-serif",
+                        fontWeight: "400",
+                      }}
+                    >
+                      PASADO
+                    </span>
+                  ) : (
+                    <a
+                      href={tourLinks[show.date]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full md:w-auto border border-white text-white font-black py-2 px-4 md:px-6 rounded hover:bg-white hover:text-black transition-colors duration-300 uppercase tracking-wide text-sm md:text-base inline-block text-center"
+                      style={{
+                        fontFamily: "Anton, sans-serif",
+                        fontWeight: "400",
+                      }}
+                    >
+                      TICKETS
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}

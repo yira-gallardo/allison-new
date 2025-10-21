@@ -54,11 +54,12 @@ export default function InstagramSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true, amount: 0.3 }}
         >
+          {" "}
           <iframe
-            src="//lightwidget.com/widgets/4f47618adfef597a838000bf15d19015.html"
+            src="//lightwidget.com/widgets/09ab80bcab075737b48dba2c4f67b1a5.html"
             scrolling="no"
             allowtransparency="true"
-            className="lightwidget-widget w-full border-0 overflow-hidden rounded-lg"
+            class="lightwidget-widget"
             style={{
               width: "100%",
               border: 0,

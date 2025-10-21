@@ -12,8 +12,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Allison ",
-  description: "Allison Euforia Tour 2025",
+  title: "Allison - Euforia Tour 2025",
+  description: "Allison Euforia Tour 2025 - Conciertos, música y más",
+  openGraph: {
+    title: "Allison - Euforia Tour 2025",
+    description: "Allison Euforia Tour 2025 - Conciertos, música y más",
+    images: [
+      {
+        url: "/img/banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Allison Euforia Tour 2025",
+      },
+    ],
+    locale: "es_ES",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Allison - Euforia Tour 2025",
+    description: "Allison Euforia Tour 2025 - Conciertos, música y más",
+    images: ["/img/banner.jpg"],
+  },
 };
 
 export default function RootLayout({ children }) {

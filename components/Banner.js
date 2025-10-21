@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function Banner() {
   return (
     <motion.div
-      className="relative h-screen overflow-hidden"
+      className="relative h-screen overflow-hidden bg-black"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -18,28 +18,43 @@ export default function Banner() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-        <Image
-          src="/img/banner.jpg"
-          alt="Allison Euforia Tour Banner"
-          fill
-          className="object-cover hidden md:block"
-          priority
-        />
+        <a
+          href="https://linktr.ee/allisonband"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full h-full cursor-pointer"
+        >
+          <Image
+            src="/img/banner.jpg"
+            alt="Allison Euforia Tour Banner"
+            fill
+            className="object-cover hidden md:block hover:opacity-90 transition-opacity duration-300"
+            priority
+          />
+        </a>
       </motion.div>
 
       {/* Imagen de fondo para móvil */}
       <motion.div
+        className="bg-black"
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-        <Image
-          src="/img/banner-mobile.jpg"
-          alt="Allison Euforia Tour Banner Mobile"
-          fill
-          className="object-contain block md:hidden"
-          priority
-        />
+        <a
+          href="https://linktr.ee/allisonband"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full h-full cursor-pointer"
+        >
+          <Image
+            src="/img/banner-mobile.jpg"
+            alt="Allison Euforia Tour Banner Mobile"
+            fill
+            className="object-contain block md:hidden hover:opacity-90 transition-opacity duration-300"
+            priority
+          />
+        </a>
       </motion.div>
 
       {/* Overlay oscuro para mejorar legibilidad */}
