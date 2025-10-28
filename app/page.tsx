@@ -147,28 +147,16 @@ const photos: Photo[] = [
 
 const tourDates = [
   {
-    date: "Oct. 16",
-    venue: "Distroy",
-    city: "Zacatecas, MX",
-    link: "https://trendingpass.com/product/allison-euforia-zacatecas/",
-  },
-  {
-    date: "Oct. 17",
-    venue: "Rock Sí",
-    city: "Aguascalientes, MX",
-    link: "https://trendingpass.com/product/allison-euforia-aguascalientes/",
-  },
-  {
-    date: "Oct. 18",
-    venue: "La Suavecita",
-    city: "Morelia, MX",
-    link: "https://trendingpass.com/product/allison-euforia-morelia/",
-  },
-  {
     date: "Nov. 8",
     venue: "Vamos Otra Vez Fest",
     city: "Toluca, MX",
     link: "https://boleticka.com/puntoVenta/#/preview/136",
+  },
+  {
+    date: "Dic. 5",
+    venue: "House Of Punk",
+    city: "Puebla, MX",
+    link: "https://www.passline.com/eventos/house-of-punk-xmass-fest?fbclid=IwY2xjawNtFgFleHRuA2FlbQIxMABicmlkETExZDNtVlNoTjdneVVocHdZAR4YMbkWpR7MNLSejd5PbnicMGvb90_Pe53PvelIu1VJm4J639J1XBu5Vgcaaw_aem_9IGlmP6d5hYKj_OWYa73UQ",
   },
   {
     date: "Dic. 6",
