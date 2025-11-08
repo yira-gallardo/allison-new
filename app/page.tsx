@@ -147,12 +147,6 @@ const photos: Photo[] = [
 
 const tourDates = [
   {
-    date: "Nov. 8",
-    venue: "Vamos Otra Vez Fest",
-    city: "Toluca, MX",
-    link: "https://boleticka.com/puntoVenta/#/preview/136",
-  },
-  {
     date: "Dic. 5",
     venue: "House Of Punk",
     city: "Puebla, MX",
@@ -165,16 +159,34 @@ const tourDates = [
     link: "https://web2.superboletos.com/SuperBoletos/landing-evento?event_id=2PwXQC9H2Moo5wUENjVDVg",
   },
   {
+    date: "Dic. 19",
+    venue: "Marshall Rock Joint",
+    city: "Xalapa, MX",
+    link: "https://trendingpass.com/product/allison-veracruz/",
+  },
+  {
+    date: "Dic. 21",
+    venue: "Shula",
+    city: "Tehuacán, MX",
+    link: "https://trendingpass.com/product/allison-puebla",
+  },
+  {
     date: "Feb. 20",
     venue: "Vamos Otra Vez Fest",
     city: "San Luis Potosí, MX",
     link: "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=636",
   },
   {
-    date: "Feb. 1",
+    date: "Feb. 21",
     venue: "Vamos Otra Vez Fest",
     city: "León, MX",
     link: "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=616",
+  },
+  {
+    date: "Feb. 22",
+    venue: "Vamos Otra Vez Fest",
+    city: "Toluca, MX",
+    link: "https://boleticka.com/puntoVenta/#/preview/136",
   },
   {
     date: "Feb. 28",
