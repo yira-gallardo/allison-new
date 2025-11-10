@@ -18,7 +18,7 @@ export default function DynamicVideo({ channelHandle, apiKey }) {
 
       try {
         let channelData;
-        
+
         // If it's a channel ID (starts with UC), use it directly
         if (channelHandle.startsWith("UC")) {
           const channelResponse = await fetch(
@@ -35,9 +35,11 @@ export default function DynamicVideo({ channelHandle, apiKey }) {
           const searchQuery = channelHandle.startsWith("@")
             ? channelHandle.substring(1)
             : channelHandle;
-          
+
           const searchResponse = await fetch(
-            `https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&q=${encodeURIComponent(searchQuery)}&key=${apiKey}&maxResults=1`
+            `https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&q=${encodeURIComponent(
+              searchQuery
+            )}&key=${apiKey}&maxResults=1`
           );
 
           if (!searchResponse.ok) {
