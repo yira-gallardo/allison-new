@@ -3,30 +3,66 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-export default function DynamicVideo({ channelId, apiKey }) {
+export default function DynamicVideo({ channelHandle, apiKey }) {
   const [latestVideo, setLatestVideo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchLatestVideo = async () => {
-      if (!channelId || !apiKey) {
-        setError("Channel ID and API key are required");
+      if (!channelHandle || !apiKey) {
+        setError("Channel handle and API key are required");
         setLoading(false);
         return;
       }
 
       try {
-        // First, get the uploads playlist ID
-        const channelResponse = await fetch(
-          `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelId}&key=${apiKey}`
-        );
+        let channelData;
+        
+        // If it's a channel ID (starts with UC), use it directly
+        if (channelHandle.startsWith("UC")) {
+          const channelResponse = await fetch(
+            `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelHandle}&key=${apiKey}`
+          );
 
-        if (!channelResponse.ok) {
-          throw new Error("Failed to fetch channel data");
+          if (!channelResponse.ok) {
+            throw new Error("Failed to fetch channel data");
+          }
+
+          channelData = await channelResponse.json();
+        } else {
+          // Otherwise, search for the channel by handle/username
+          const searchQuery = channelHandle.startsWith("@")
+            ? channelHandle.substring(1)
+            : channelHandle;
+          
+          const searchResponse = await fetch(
+            `https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&q=${encodeURIComponent(searchQuery)}&key=${apiKey}&maxResults=1`
+          );
+
+          if (!searchResponse.ok) {
+            throw new Error("Failed to search for channel");
+          }
+
+          const searchData = await searchResponse.json();
+
+          if (!searchData.items || searchData.items.length === 0) {
+            throw new Error("Channel not found");
+          }
+
+          const channelId = searchData.items[0].snippet.channelId;
+
+          // Now get the channel details with the found channel ID
+          const channelResponse = await fetch(
+            `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelId}&key=${apiKey}`
+          );
+
+          if (!channelResponse.ok) {
+            throw new Error("Failed to fetch channel data");
+          }
+
+          channelData = await channelResponse.json();
         }
-
-        const channelData = await channelResponse.json();
 
         if (!channelData.items || channelData.items.length === 0) {
           throw new Error("Channel not found");
@@ -59,7 +95,7 @@ export default function DynamicVideo({ channelId, apiKey }) {
     };
 
     fetchLatestVideo();
-  }, [channelId, apiKey]);
+  }, [channelHandle, apiKey]);
 
   if (loading) {
     return (

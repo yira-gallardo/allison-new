@@ -56,7 +56,7 @@ export default function InstagramSection() {
         >
           {" "}
           <iframe
-            src="//lightwidget.com/widgets/09ab80bcab075737b48dba2c4f67b1a5.html"
+            src="https://cdn.lightwidget.com/widgets/09ab80bcab075737b48dba2c4f67b1a5.html"
             scrolling="no"
             allowtransparency="true"
             class="lightwidget-widget"
