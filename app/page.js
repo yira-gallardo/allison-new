@@ -11,19 +11,14 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Banner de fondo */}
       <Banner />
-
       {/* Sección de YouTube */}
       <YouTubeSection />
-
       {/* Sección de Tour */}
       <TourSection />
-
       {/* Sección de Merchandise */}
       <MerchSection />
-
       {/* Sección de Instagram */}
       <InstagramSection />
-
       {/* Footer */}
       <Footer />
     </div>
