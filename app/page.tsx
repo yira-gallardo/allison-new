@@ -159,6 +159,12 @@ const tourDates = [
     link: "https://web2.superboletos.com/SuperBoletos/landing-evento?event_id=2PwXQC9H2Moo5wUENjVDVg",
   },
   {
+    date: "Dic. 14",
+    venue: "Movistar Arena",
+    city: "Bogotá, COL",
+    link: "https://www.radioacktiva.com",
+  },
+  {
     date: "Dic. 19",
     venue: "Marshall Rock Joint",
     city: "Xalapa, MX",
@@ -169,6 +175,12 @@ const tourDates = [
     venue: "Shula",
     city: "Tehuacán, MX",
     link: "https://trendingpass.com/product/allison-puebla",
+  },
+  {
+    date: "Ene. 23",
+    venue: "Don Burro",
+    city: "Chihuahua, MX",
+    link: "https://trendingpass.com/product/allison-chihuahua/",
   },
   {
     date: "Feb. 20",
@@ -193,6 +205,24 @@ const tourDates = [
     venue: "Vamos Otra Vez Fest",
     city: "Querétaro, MX",
     link: "https://www.eticket.mx/masinformacion.aspx?idevento=34254",
+  },  
+  {
+    date: "Mar. 15",
+    venue: "Vive Latino",
+    city: "CDMX, MX",
+    link: "https://www.vivelatino.com.mx/boletos",
+  },
+  {
+    date: "Mar. 28",
+    venue: "Tecate Pa'l Norte",
+    city: "Monterrey, MX",
+    link: "https://www.tecatepalnorte.com/boletos",
+  },
+  {
+    date: "Abr. 11",
+    venue: "C4 Stage",
+    city: "Guadalajara, MX",
+    link: "https://www.ticketnowmexico.com/evento/presentacion/allison-en-c4-concert-house/918",
   },
 ];
 
