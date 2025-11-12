@@ -3,92 +3,33 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-export default function DynamicVideo({ channelHandle, apiKey }) {
+export default function DynamicVideo({ channelHandle }) {
   const [latestVideo, setLatestVideo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchLatestVideo = async () => {
-      if (!channelHandle || !apiKey) {
-        setError("Channel handle and API key are required");
+      if (!channelHandle) {
+        setError("Channel handle is required");
         setLoading(false);
         return;
       }
 
       try {
-        let channelData;
-
-        // If it's a channel ID (starts with UC), use it directly
-        if (channelHandle.startsWith("UC")) {
-          const channelResponse = await fetch(
-            `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelHandle}&key=${apiKey}`
-          );
-
-          if (!channelResponse.ok) {
-            throw new Error("Failed to fetch channel data");
-          }
-
-          channelData = await channelResponse.json();
-        } else {
-          // Otherwise, search for the channel by handle/username
-          const searchQuery = channelHandle.startsWith("@")
-            ? channelHandle.substring(1)
-            : channelHandle;
-
-          const searchResponse = await fetch(
-            `https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&q=${encodeURIComponent(
-              searchQuery
-            )}&key=${apiKey}&maxResults=1`
-          );
-
-          if (!searchResponse.ok) {
-            throw new Error("Failed to search for channel");
-          }
-
-          const searchData = await searchResponse.json();
-
-          if (!searchData.items || searchData.items.length === 0) {
-            throw new Error("Channel not found");
-          }
-
-          const channelId = searchData.items[0].snippet.channelId;
-
-          // Now get the channel details with the found channel ID
-          const channelResponse = await fetch(
-            `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelId}&key=${apiKey}`
-          );
-
-          if (!channelResponse.ok) {
-            throw new Error("Failed to fetch channel data");
-          }
-
-          channelData = await channelResponse.json();
-        }
-
-        if (!channelData.items || channelData.items.length === 0) {
-          throw new Error("Channel not found");
-        }
-
-        const uploadsPlaylistId =
-          channelData.items[0].contentDetails.relatedPlaylists.uploads;
-
-        // Get the latest video from the uploads playlist
-        const videosResponse = await fetch(
-          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=1&order=date&key=${apiKey}`
+        const response = await fetch(
+          `/api/youtube/latest?channelHandle=${encodeURIComponent(
+            channelHandle
+          )}`
         );
 
-        if (!videosResponse.ok) {
-          throw new Error("Failed to fetch videos");
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || "Failed to fetch video");
         }
 
-        const videosData = await videosResponse.json();
-
-        if (!videosData.items || videosData.items.length === 0) {
-          throw new Error("No videos found");
-        }
-
-        setLatestVideo(videosData.items[0]);
+        const videoData = await response.json();
+        setLatestVideo(videoData);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -97,7 +38,7 @@ export default function DynamicVideo({ channelHandle, apiKey }) {
     };
 
     fetchLatestVideo();
-  }, [channelHandle, apiKey]);
+  }, [channelHandle]);
 
   if (loading) {
     return (
