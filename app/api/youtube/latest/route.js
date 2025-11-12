@@ -6,10 +6,17 @@ export async function GET(request) {
 
   const apiKey = process.env.YOUTUBE_API_KEY;
 
-  if (!channelHandle || !apiKey) {
+  if (!channelHandle) {
     return NextResponse.json(
-      { error: "Channel handle and API key are required" },
+      { error: "Channel handle is required" },
       { status: 400 }
+    );
+  }
+
+  if (!apiKey) {
+    return NextResponse.json(
+      { error: "YouTube API key is not configured" },
+      { status: 500 }
     );
   }
 
@@ -23,41 +30,36 @@ export async function GET(request) {
       );
 
       if (!channelResponse.ok) {
-        throw new Error("Failed to fetch channel data");
+        const errorData = await channelResponse.json();
+        console.error("YouTube API channel error:", errorData);
+        throw new Error(
+          `Failed to fetch channel data: ${
+            errorData.error?.message || channelResponse.statusText
+          }`
+        );
       }
 
       channelData = await channelResponse.json();
     } else {
-      // Otherwise, search for the channel by handle/username
-      const searchQuery = channelHandle.startsWith("@")
+      // For handles like @allison, use forHandle parameter
+      const handle = channelHandle.startsWith("@")
         ? channelHandle.substring(1)
         : channelHandle;
 
-      const searchResponse = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&q=${encodeURIComponent(
-          searchQuery
-        )}&key=${apiKey}&maxResults=1`
-      );
-
-      if (!searchResponse.ok) {
-        throw new Error("Failed to search for channel");
-      }
-
-      const searchData = await searchResponse.json();
-
-      if (!searchData.items || searchData.items.length === 0) {
-        throw new Error("Channel not found");
-      }
-
-      const channelId = searchData.items[0].snippet.channelId;
-
-      // Now get the channel details with the found channel ID
       const channelResponse = await fetch(
-        `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelId}&key=${apiKey}`
+        `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&forHandle=${encodeURIComponent(
+          handle
+        )}&key=${apiKey}`
       );
 
       if (!channelResponse.ok) {
-        throw new Error("Failed to fetch channel data");
+        const errorData = await channelResponse.json();
+        console.error("YouTube API forHandle error:", errorData);
+        throw new Error(
+          `Failed to fetch channel by handle: ${
+            errorData.error?.message || channelResponse.statusText
+          }`
+        );
       }
 
       channelData = await channelResponse.json();
@@ -76,7 +78,13 @@ export async function GET(request) {
     );
 
     if (!videosResponse.ok) {
-      throw new Error("Failed to fetch videos");
+      const errorData = await videosResponse.json();
+      console.error("YouTube API videos error:", errorData);
+      throw new Error(
+        `Failed to fetch videos: ${
+          errorData.error?.message || videosResponse.statusText
+        }`
+      );
     }
 
     const videosData = await videosResponse.json();
@@ -87,6 +95,10 @@ export async function GET(request) {
 
     return NextResponse.json(videosData.items[0]);
   } catch (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("YouTube API error:", error);
+    return NextResponse.json(
+      { error: error.message, details: error.toString() },
+      { status: 500 }
+    );
   }
 }
