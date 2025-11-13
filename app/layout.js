@@ -12,11 +12,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Allison - Euforia Tour 2025",
-  description: "Allison Euforia Tour 2025 - Conciertos, música y más",
+  title: "Alison",
+  description: "Allison ",
   openGraph: {
     title: "Allison - Euforia Tour 2025",
-    description: "Allison Euforia Tour 2025 - Conciertos, música y más",
+    description: "Allison ",
     images: [
       {
         url: "/img/banner.jpg",
@@ -31,7 +31,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Allison - Euforia Tour 2025",
-    description: "Allison Euforia Tour 2025 - Conciertos, música y más",
+    description: "Allison ",
     images: ["/img/banner.jpg"],
   },
 };
