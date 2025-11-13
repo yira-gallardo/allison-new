@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "AlLison",
+  title: "Allison",
   description: "Allison ",
   openGraph: {
     title: "Allison - Euforia Tour 2025",
