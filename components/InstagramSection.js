@@ -20,7 +20,7 @@ export default function InstagramSection() {
 
   return (
     <motion.section
-      className="py-16 relative"
+      className="pt-8 pb-16 relative"
       style={{
         backgroundImage: "url('/img/textura.jpg')",
         backgroundSize: "cover",
@@ -36,15 +36,19 @@ export default function InstagramSection() {
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="container mx-auto px-4 relative z-10">
         {/* Instagram Title */}
-        <motion.h2
-          className="text-4xl md:text-6xl font-bold text-center text-white mb-12 tracking-wider"
+        <motion.div
+          className="flex justify-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          INSTAGRAM
-        </motion.h2>
+          <img
+            src="/img/igtext_mob.png"
+            alt="INSTAGRAM"
+            className="w-full max-w-2xl h-auto px-4"
+          />
+        </motion.div>
 
         {/* LightWidget Instagram Feed */}
         <motion.div

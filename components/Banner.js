@@ -57,14 +57,6 @@ export default function Banner() {
         </a>
       </motion.div>
 
-      {/* Overlay oscuro para mejorar legibilidad */}
-      <motion.div
-        className="absolute inset-0 bg-black/40"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-      ></motion.div>
-
       {/* Navegación superior - posicionada absolutamente */}
       <motion.div
         className="absolute top-0 left-0 right-0 z-20"
