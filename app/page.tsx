@@ -147,18 +147,6 @@ const photos: Photo[] = [
 
 const tourDates = [
   {
-    date: "Dic. 5",
-    venue: "House Of Punk",
-    city: "Puebla, MX",
-    link: "https://www.passline.com/eventos/house-of-punk-xmass-fest?fbclid=IwY2xjawNtFgFleHRuA2FlbQIxMABicmlkETExZDNtVlNoTjdneVVocHdZAR4YMbkWpR7MNLSejd5PbnicMGvb90_Pe53PvelIu1VJm4J639J1XBu5Vgcaaw_aem_9IGlmP6d5hYKj_OWYa73UQ",
-  },
-  {
-    date: "Dic. 6",
-    venue: "Jardines de México",
-    city: "Tequesquitengo, MX",
-    link: "https://web2.superboletos.com/SuperBoletos/landing-evento?event_id=2PwXQC9H2Moo5wUENjVDVg",
-  },
-  {
     date: "Dic. 14",
     venue: "Movistar Arena",
     city: "Bogotá, COL",
@@ -181,6 +169,12 @@ const tourDates = [
     venue: "Don Burro",
     city: "Chihuahua, MX",
     link: "https://trendingpass.com/product/allison-chihuahua/",
+  },
+  {
+    date: "Ene. 25",
+    venue: "Fred's Bar",
+    city: "Cd Juárez, MX",
+    link: "https://trendingpass.com/product/allison-cdjuarez/",
   },
   {
     date: "Feb. 20",
