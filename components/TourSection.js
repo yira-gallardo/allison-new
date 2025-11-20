@@ -20,10 +20,12 @@ export default function TourSection() {
     // Parsear la fecha del formato "26.SEP"
     const [day, month] = dateString.split(".");
     const monthMap = {
+      ENE: 0,
       JAN: 0,
       FEB: 1,
       MAR: 2,
       APR: 3,
+      ABR: 3,
       MAY: 4,
       JUN: 5,
       JUL: 6,
@@ -79,16 +81,41 @@ export default function TourSection() {
       location: "TEQUESQUITENGO, MÉXICO - JARDINES DE MÉXICO",
     },
     {
+      date: "14.DIC",
+      year: 2025,
+      location: "BOGOTÁ, COL - MOVISTAR ARENA",
+    },
+    {
+      date: "19.DIC",
+      year: 2025,
+      location: "XALAPA, MX - MARSHALL ROCK JOINT",
+    },
+    { date: "21.DIC", year: 2025, location: "TEHUACÁN, MX - SHULA" },
+    { date: "23.ENE", year: 2026, location: "CHIHUAHUA, MX - DON BURRO" },
+    { date: "25.ENE", year: 2026, location: "CD JUÁREZ, MX - FRED'S BAR" },
+    {
       date: "20.FEB",
       year: 2026,
-      location: "SAN LUIS POTOSÍ, MÉXICO - VAMOS OTRA VEZ",
+      location: "SAN LUIS POTOSÍ, MX - VAMOS OTRA VEZ FEST",
     },
-    { date: "21.FEB", year: 2026, location: "LEÓN, MÉXICO - VAMOS OTRA VEZ" },
+    { date: "21.FEB", year: 2026, location: "LEÓN, MX - VAMOS OTRA VEZ FEST" },
+    {
+      date: "22.FEB",
+      year: 2026,
+      location: "TOLUCA, MX - VAMOS OTRA VEZ FEST",
+    },
     {
       date: "28.FEB",
       year: 2026,
-      location: "QUERÉTARO, MÉXICO - VAMOS OTRA VEZ",
+      location: "QUERÉTARO, MX - VAMOS OTRA VEZ FEST",
     },
+    { date: "15.MAR", year: 2026, location: "CDMX, MX - VIVE LATINO" },
+    {
+      date: "28.MAR",
+      year: 2026,
+      location: "MONTERREY, MX - TECATE PA'L NORTE",
+    },
+    { date: "11.ABR", year: 2026, location: "GUADALAJARA, MX - C4 STAGE" },
   ];
 
   // Links para cada fecha del tour
@@ -107,11 +134,33 @@ export default function TourSection() {
     "05.DIC": "https://trendingpass.com/product/allison-euforia-puebla/",
     "06.DIC":
       "https://www.superboletos.com/landing-evento/2PwXQC9H2Moo5wUENjVDVg",
+    "14.DIC": "https://www.radioacktiva.com",
+    "19.DIC": "https://trendingpass.com/product/allison-veracruz/",
+    "21.DIC": "https://trendingpass.com/product/allison-puebla",
+    "23.ENE": "https://trendingpass.com/product/allison-chihuahua/",
+    "25.ENE": "https://trendingpass.com/product/allison-cdjuarez/",
     "20.FEB":
       "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=636",
-    "21.FEB": "https://eventos.taquillaplus.com.mx/ordertickets.asp?p=1012",
+    "21.FEB":
+      "https://eventos.taquillaplus.com.mx/eventperformances.asp?evt=616",
+    "22.FEB": "https://boleticka.com/puntoVenta/#/preview/136",
     "28.FEB": "https://www.eticket.mx/masinformacion.aspx?idevento=34254",
+    "15.MAR": "https://www.vivelatino.com.mx/boletos",
+    "28.MAR": "https://www.tecatepalnorte.com/boletos",
+    "11.ABR":
+      "https://www.ticketnowmexico.com/evento/presentacion/allison-en-c4-concert-house/918",
   };
+
+  // Ordenar fechas: primero las futuras, luego las pasadas
+  const sortedTourDates = React.useMemo(() => {
+    const futureDates = tourDates.filter(
+      (show) => !isDatePassed(show.date, show.year)
+    );
+    const pastDates = tourDates.filter((show) =>
+      isDatePassed(show.date, show.year)
+    );
+    return [...futureDates, ...pastDates];
+  }, []);
 
   return (
     <motion.section
@@ -160,7 +209,7 @@ export default function TourSection() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <div className="divide-y divide-white/20">
-            {tourDates.map((show, index) => (
+            {sortedTourDates.map((show, index) => (
               <motion.div
                 key={index}
                 className="flex flex-col md:flex-row items-start md:items-center justify-between p-4 md:p-6 hover:bg-white/5 transition-colors duration-300 space-y-3 md:space-y-0"
