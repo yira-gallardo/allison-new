@@ -164,7 +164,7 @@ export default function TourSection() {
 
   return (
     <motion.section
-      className="py-8 md:py-16 px-4 md:px-6 relative"
+      className="py-8 md:py-16 px-4 md:px-6 relative min-h-screen"
       style={{
         backgroundImage: "url('/img/textura.jpg')",
         backgroundSize: "cover",
@@ -174,7 +174,7 @@ export default function TourSection() {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       {/* Overlay para mantener la legibilidad del texto */}
       <div className="absolute inset-0 bg-black/60"></div>
@@ -185,7 +185,7 @@ export default function TourSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <h2
             className="text-3xl md:text-5xl lg:text-6xl font-black text-[#A0BEC0] mb-4 tracking-wider uppercase"
@@ -206,7 +206,7 @@ export default function TourSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.05 }}
         >
           <div className="divide-y divide-white/20">
             {sortedTourDates.map((show, index) => (
@@ -215,8 +215,11 @@ export default function TourSection() {
                 className="flex flex-col md:flex-row items-start md:items-center justify-between p-4 md:p-6 hover:bg-white/5 transition-colors duration-300 space-y-3 md:space-y-0"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true, amount: 0.3 }}
+                transition={{
+                  duration: 0.5,
+                  delay: Math.min(index * 0.05, 0.5),
+                }}
+                viewport={{ once: true, amount: 0.1 }}
                 whileHover={{ scale: 1.02 }}
               >
                 {/* Fecha */}

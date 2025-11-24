@@ -15,7 +15,7 @@ export const metadata = {
   title: "Allison",
   description: "Allison ",
   openGraph: {
-    title: "Allison - Euforia Tour 2025",
+    title: "Allison ",
     description: "Allison ",
     images: [
       {
@@ -30,7 +30,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Allison - Euforia Tour 2025",
+    title: "Allison",
     description: "Allison ",
     images: ["/img/banner.jpg"],
   },
