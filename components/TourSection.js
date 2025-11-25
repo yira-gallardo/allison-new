@@ -151,15 +151,14 @@ export default function TourSection() {
       "https://www.ticketnowmexico.com/evento/presentacion/allison-en-c4-concert-house/918",
   };
 
-  // Ordenar fechas: primero las futuras, luego las pasadas
+  // Filtrar solo las fechas futuras y excluir fechas específicas
   const sortedTourDates = React.useMemo(() => {
+    const hiddenDates = ["05.DIC", "06.DIC"]; // Fechas ocultas al público
     const futureDates = tourDates.filter(
-      (show) => !isDatePassed(show.date, show.year)
+      (show) =>
+        !isDatePassed(show.date, show.year) && !hiddenDates.includes(show.date)
     );
-    const pastDates = tourDates.filter((show) =>
-      isDatePassed(show.date, show.year)
-    );
-    return [...futureDates, ...pastDates];
+    return futureDates;
   }, []);
 
   return (

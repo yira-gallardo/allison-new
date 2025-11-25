@@ -42,7 +42,9 @@ export default function Footer() {
         <div className="flex justify-center items-center space-x-4 md:space-x-6 mb-6 md:mb-8 flex-wrap gap-2">
           {/* Spotify */}
           <a
-            href="#"
+            href="https://open.spotify.com/intl-es/artist/4AP5EFbVVcBv8cfyqO0oqr?si=xrlhqq8MR7GWRgN0-4V2Ag&nd=1&dlsi=0d480986c78d4e29"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 text-[#A0BEC0] rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
             aria-label="Spotify"
           >
@@ -57,7 +59,9 @@ export default function Footer() {
 
           {/* Instagram */}
           <a
-            href="#"
+            href="https://www.instagram.com/allisonband/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 text-[#A0BEC0] rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
             aria-label="Instagram"
           >
@@ -72,7 +76,9 @@ export default function Footer() {
 
           {/* Facebook */}
           <a
-            href="#"
+            href="https://www.facebook.com/Allisonoficial"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 text-[#A0BEC0] rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
             aria-label="Facebook"
           >
@@ -87,7 +93,9 @@ export default function Footer() {
 
           {/* YouTube */}
           <a
-            href="#"
+            href="https://www.youtube.com/channel/UCFCFBfGHOv8wItbjwQPktyA"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 text-[#A0BEC0] rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
             aria-label="YouTube"
           >
@@ -102,7 +110,9 @@ export default function Footer() {
 
           {/* X (Twitter) */}
           <a
-            href="#"
+            href="https://x.com/allisonband"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 text-[#A0BEC0] rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
             aria-label="X (Twitter)"
           >
@@ -117,7 +127,9 @@ export default function Footer() {
 
           {/* TikTok */}
           <a
-            href="#"
+            href="https://www.tiktok.com/@allisonband?lang=es"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 text-[#A0BEC0] rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
             aria-label="TikTok"
           >
