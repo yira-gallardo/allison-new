@@ -126,6 +126,11 @@ export default function TourSection() {
       year: 2026,
       location: "HOUSTON, TX - BRONZE PEACOCK"
     },
+    {
+      date: "18.JUL",
+      year: 2026,
+      location: "SAN ANTONIO, TX - PAPER TIGER"
+    },
   ];
 
   // Links para cada fecha del tour
