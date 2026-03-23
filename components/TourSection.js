@@ -116,6 +116,16 @@ export default function TourSection() {
       location: "MONTERREY, MX - TECATE PA'L NORTE",
     },
     { date: "11.ABR", year: 2026, location: "GUADALAJARA, MX - C4 STAGE" },
+    {
+      date: "16.JUL",
+      year: 2026,
+      location: "CORPUS CHRISTI, TX - HOUSE OF ROCK",
+    },
+    {
+      date: "17.JUL",
+      year: 2026,
+      location: "HOUSTON, TX - BRONZE PEACOCK"
+    },
   ];
 
   // Links para cada fecha del tour
