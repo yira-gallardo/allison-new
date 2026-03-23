@@ -131,6 +131,11 @@ export default function TourSection() {
       year: 2026,
       location: "SAN ANTONIO, TX - PAPER TIGER"
     },
+    {
+      date: "19.JUL",
+      year: 2026,
+      location: "DALLAS, TX - PUZZLES"
+    },
   ];
 
   // Links para cada fecha del tour
