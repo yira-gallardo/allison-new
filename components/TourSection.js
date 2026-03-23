@@ -174,6 +174,7 @@ export default function TourSection() {
     "28.MAR": "https://www.tecatepalnorte.com/boletos",
     "11.ABR":
       "https://www.ticketnowmexico.com/evento/presentacion/allison-en-c4-concert-house/918",
+    "16.JUL": "https://www.etix.com/ticket/p/39765848/allison-eforia-usa-tour-corpus-christi-house-of-rock",
   };
 
   // Filtrar solo las fechas futuras y excluir fechas específicas
