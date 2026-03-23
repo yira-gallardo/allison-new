@@ -136,6 +136,11 @@ export default function TourSection() {
       year: 2026,
       location: "DALLAS, TX - PUZZLES"
     },
+    {
+      date: "21.JUL",
+      year: 2026,
+      location: "EL PASO, TX - LOWBROW PALACE"
+    },
   ];
 
   // Links para cada fecha del tour
